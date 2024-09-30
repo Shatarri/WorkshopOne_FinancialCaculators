@@ -8,7 +8,16 @@ public class Calculator2 {
         // getting user information
         //using double data type for decimal numbers
         System.out.println("Enter the deposit amount: ");
-        double principal = scanner.nextdouble();
+        double principal = scanner.nextDouble();
+
+        System.out.println("enter the annual interest rate (in %): ");
+        double annualInterestRate = scanner.nextDouble();
+
+        System.out.println("Enter the number of years: ");
+        int years = Scanner.nextInt();
+
+        //
+
 
 
 
