@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Calculator2 {
     public static void main(String[] args) {
-        Scanner scanner = new scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         // getting user information
         //using double data type for decimal numbers
@@ -14,7 +14,7 @@ public class Calculator2 {
         double annualInterestRate = scanner.nextDouble();
 
         System.out.println("Enter the number of years: ");
-        int years = Scanner.nextInt();
+        int years = scanner.nextInt();
 
         //calculating future value
 
@@ -28,7 +28,21 @@ public class Calculator2 {
         System.out.printf("Total Interest Earned: $%.2f%n", totalInterest);
 
         scanner.close();
+    }
+    //method to calculate future values
+    public static double calculatorFutureValue(double principal, double annualInterestRate, int years) {
 
+        int daysInYear = 365;
+        double dailyInterestRate = annualInterestRate / 100 / daysInYear;
 
+        int totalDays = years * daysInYear;
+
+        double futureValue = principal;
+
+        //daily interest rate
+        for (int day = 0; day < totalDays; day++) {
+            futureValue += futureValue * dailyInterestRate;
+        }
+        return futureValue;
     }
 }
