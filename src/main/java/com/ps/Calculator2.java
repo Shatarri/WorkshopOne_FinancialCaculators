@@ -2,7 +2,7 @@ package com.ps;
 import java.util.Scanner;
 
 public class Calculator2 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new scanner(System.in);
 
         // getting user information
@@ -22,8 +22,12 @@ public class Calculator2 {
         double totalInterest = futureValue - principal;
 
         //displaying results to end user
+        //using print && format
 
+        System.out.printf("Future Value: $%.2f%n", futureValue);
+        System.out.printf("Total Interest Earned: $%.2f%n", totalInterest);
 
+        scanner.close();
 
 
     }
