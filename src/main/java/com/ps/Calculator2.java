@@ -16,7 +16,12 @@ public class Calculator2 {
         System.out.println("Enter the number of years: ");
         int years = Scanner.nextInt();
 
-        //
+        //calculating future value
+
+        double futureValue = calculatorFutureValue(principal, annualInterestRate, years);
+        double totalInterest = futureValue - principal;
+
+        //displaying results to end user
 
 
 
